@@ -413,7 +413,7 @@ func TestStdLogger(t *testing.T) {
 func TestStdLoggerC(t *testing.T) {
 	l := NewStdLoggerC(ctxtA)
 	var buf bytes.Buffer
-	//l.SetOutput(&buf)
+	l.SetOutput(&buf)
 	l.Printf("This is demo")
 	// Note that the check is a hack because it actually prints out the following log entry
 	// {"time":"2018-04-23T17:51:49.885+02:00","lvl":"ERROR","trans":"txid","op":"op1","msg":"This is demo"}
